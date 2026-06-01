@@ -1,0 +1,240 @@
+openapi: 3.0.3
+info:
+  title: Hotel Booking System API
+  description: API for managing hotels and rooms (Hotel & Room entities).
+  version: 1.0.0
+servers:
+  - url: https://api.hotelbook.example.com/v1
+paths:
+  /hotels:
+    get:
+      summary: Get a list of hotels
+      parameters:
+        - name: city
+          in: query
+          required: false
+          schema:
+            type: string
+          description: Filter hotels by city name
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Hotel'
+    post:
+      summary: Add a new hotel
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/HotelInput'
+      responses:
+        '201':
+          description: Hotel successfully created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Hotel'
+        '400':
+          description: Invalid input data
+
+  /hotels/{id}:
+    get:
+      summary: Get a hotel by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Hotel'
+        '404':
+          description: Hotel not found
+    put:
+      summary: Update hotel details
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/HotelInput'
+      responses:
+        '200':
+          description: Hotel updated successfully
+        '404':
+          description: Hotel not found
+    delete:
+      summary: Delete a hotel
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Hotel deleted successfully
+
+  /hotels/{hotelId}/rooms:
+    get:
+      summary: Get hotel rooms
+      parameters:
+        - name: hotelId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: List of rooms
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Room'
+    post:
+      summary: Add a room to the hotel
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: hotelId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RoomInput'
+      responses:
+        '201':
+          description: Room created successfully
+
+  /rooms/{id}:
+    get:
+      summary: Get room details
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+    put:
+      summary: Update room details
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RoomInput'
+      responses:
+        '200':
+          description: Room updated successfully
+    delete:
+      summary: Delete a room
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Room deleted successfully
+
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  schemas:
+    Hotel:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        city:
+          type: string
+        address:
+          type: string
+        stars:
+          type: integer
+    HotelInput:
+      type: object
+      required: [name, city, address, stars]
+      properties:
+        name:
+          type: string
+        city:
+          type: string
+        address:
+          type: string
+        stars:
+          type: integer
+    Room:
+      type: object
+      properties:
+        id:
+          type: string
+        hotelId:
+          type: string
+        roomNumber:
+          type: string
+        type:
+          type: string
+          enum: [Single, Double, Suite]
+        pricePerNight:
+          type: number
+    RoomInput:
+      type: object
+      required: [roomNumber, type, pricePerNight]
+      properties:
+        roomNumber:
+          type: string
+        type:
+          type: string
+          enum: [Single, Double, Suite]
+        pricePerNight:
+          type: number
