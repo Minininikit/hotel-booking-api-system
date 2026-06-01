@@ -2,6 +2,10 @@
 const config = {
   basePath: "/hotel-booking-api-system",
   
+  router: {
+    type: "hash"
+  },
+
   site: {
     logo: {
       src: { light: "/logo-light.svg", dark: "/logo-dark.svg" },
