@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script type="text/javascript">
+      // Этот скрипт берет путь, который вызвал 404, и превращает его в параметр для index.html
+      var segmentCount = 1; // количество сегментов в basePath (для /hotel-booking-api-system это 1)
+      var l = window.location;
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        l.pathname.split('/').slice(0, 1 + segmentCount).join('/') + '/?p=' +
+        l.pathname.split('/').slice(1 + segmentCount).join('/').replace(/&/g, '~and~') +
+        l.search.replace(/&/g, '~and~') + l.hash
+      );
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

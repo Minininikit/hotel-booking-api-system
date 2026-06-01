@@ -2,9 +2,7 @@
 const config = {
   basePath: "/hotel-booking-api-system",
   
-  router: {
-    type: "hash"
-  },
+  routing: "hash",
 
   site: {
     logo: {
