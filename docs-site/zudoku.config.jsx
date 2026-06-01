@@ -1,6 +1,6 @@
 /** @type {import('zudoku').ZudokuConfig} */
 const config = {
-  base: "/hotel-booking-api-system/",
+  basePath: "/hotel-booking-api-system",
   
   site: {
     logo: {
