@@ -1,0 +1,9 @@
+import{t as e}from"./jsx-runtime-xAYjq6ji.js";import{n as t}from"./lib-__f9k8S5.js";var n=e(),r=`This system is engineered for managing hotel properties and room allocations (Hotel & Room entities).`,i=[{depth:1,text:`About the Project & SDK`,id:`about-the-project--sdk`,children:[{depth:3,text:`Project Resources:`,id:`project-resources`}]}],a={lastModifiedTime:`2026-06-01T14:21:14.000Z`},o=`pages/about-project.md`;function s(e){let r={a:`a`,code:`code`,h1:`h1`,h3:`h3`,li:`li`,p:`p`,strong:`strong`,ul:`ul`,...t(),...e.components};return(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)(r.h1,{id:`about-the-project--sdk`,children:`About the Project & SDK`}),`
+`,(0,n.jsx)(r.p,{children:`This system is engineered for managing hotel properties and room allocations (Hotel & Room entities).`}),`
+`,(0,n.jsx)(r.h3,{id:`project-resources`,children:`Project Resources:`}),`
+`,(0,n.jsxs)(r.ul,{children:[`
+`,(0,n.jsxs)(r.li,{children:[(0,n.jsx)(r.strong,{children:`Source Code & SDK Repository:`}),` `,(0,n.jsx)(r.a,{href:`https://github.com/Minininikit/hotel-booking-api-system`,children:`GitHub Repository`})]}),`
+`,(0,n.jsxs)(r.li,{children:[(0,n.jsx)(r.strong,{children:`API Specification:`}),` Check out the `,(0,n.jsx)(r.code,{inline:`true`,children:`openapi.yaml`}),` file in the root directory.`]}),`
+`]}),`
+`,(0,n.jsxs)(r.p,{children:[`The SDK client was automatically generated for `,(0,n.jsx)(r.strong,{children:`JavaScript (ES6)`}),` and features pre-built data structures (`,(0,n.jsx)(r.code,{inline:`true`,children:`Hotel`}),`, `,(0,n.jsx)(r.code,{inline:`true`,children:`Room`}),`) alongside service abstractions to streamline networking tasks.`]})]})}function c(e={}){let{wrapper:r}={...t(),...e.components};return r?(0,n.jsx)(r,{...e,children:(0,n.jsx)(s,{...e})}):s(e)}export{o as __filepath,c as default,r as excerpt,a as frontmatter,i as tableOfContents};
+//# sourceMappingURL=about-project-ByNyqTFU.js.map

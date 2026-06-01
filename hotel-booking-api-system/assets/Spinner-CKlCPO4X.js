@@ -1,0 +1,2 @@
+import{t as e}from"./jsx-runtime-xAYjq6ji.js";import{t}from"./createLucideIcon-C-4hCYUB.js";var n=t(`loader-circle`,[[`path`,{d:`M21 12a9 9 0 1 1-6.219-8.56`,key:`13zald`}]]),r=e(),i=({size:e=16})=>(0,r.jsx)(n,{size:e,className:`animate-spin`});export{n,i as t};
+//# sourceMappingURL=Spinner-CKlCPO4X.js.map

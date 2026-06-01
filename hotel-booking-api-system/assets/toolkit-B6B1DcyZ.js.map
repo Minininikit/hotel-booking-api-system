@@ -1,0 +1,1 @@
+{"version":3,"file":"toolkit-B6B1DcyZ.js","names":[],"sources":["../../../__vite-optional-peer-dep:graphql-ws:@graphiql/toolkit"],"sourcesContent":["export default {};\nthrow new Error(`Could not resolve \"graphql-ws\" imported by \"@graphiql/toolkit\". Is it installed?`)"],"mappings":"AACA,MAAU,MAAM,kFAAkF"}

@@ -1,0 +1,2 @@
+import{a as e}from"./chunk-BNv3lrIs.js";import{t}from"./react-BFwN_vxz.js";import{d as n}from"./utils-BYy-NVt3.js";var r=e(t(),1),i=()=>{let{syntaxHighlighting:e}=n().options;if(!e)throw Error(`Syntax highlighting not configured. Provide highlighterPromise in syntaxHighlighting options.`);return(0,r.use)(e.highlighterPromise)};export{i as t};
+//# sourceMappingURL=useHighlighter-Bmszzp1Z.js.map

@@ -1,0 +1,5 @@
+import{t as e}from"./jsx-runtime-xAYjq6ji.js";import{n as t}from"./lib-__f9k8S5.js";var n=e(),r=`Hello! This project was developed by Minininikit.\r
+Software development student. This RestAPI documentation and SDK integration were created as part of a technical university assignment.`,i=[{depth:1,text:`About the Author`,id:`about-the-author`}],a={lastModifiedTime:`2026-06-01T14:21:14.000Z`},o=`pages/about-author.md`;function s(e){let r={h1:`h1`,p:`p`,...t(),...e.components};return(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)(r.h1,{id:`about-the-author`,children:`About the Author`}),`
+`,(0,n.jsx)(r.p,{children:`Hello! This project was developed by Minininikit.\r
+Software development student. This RestAPI documentation and SDK integration were created as part of a technical university assignment.`})]})}function c(e={}){let{wrapper:r}={...t(),...e.components};return r?(0,n.jsx)(r,{...e,children:(0,n.jsx)(s,{...e})}):s(e)}export{o as __filepath,c as default,r as excerpt,a as frontmatter,i as tableOfContents};
+//# sourceMappingURL=about-author-CyPv_k5-.js.map
